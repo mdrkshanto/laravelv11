@@ -27,8 +27,6 @@ class TestController extends Controller
     {
         $directory = 'web/images/test';
         $file = $request->file('image');
-        // $fileOriginalName = $file->getClientOriginalName();
-        // return $fileOriginalName;
         return $this->imageUrl($file, $directory, 500, 500);
     }
 }
