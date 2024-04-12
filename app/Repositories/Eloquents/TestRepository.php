@@ -11,8 +11,11 @@ class TestRepository implements TestRepositoryInterface
     /**
      * Create a new class instance.
      */
-    public function __construct()
+    public function index()
     {
-        //
+        // $directory = 'TestDirectory';
+        // makeDirectory($directory);
+        // return back();
+        return view('test');
     }
 }
