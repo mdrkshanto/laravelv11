@@ -4,8 +4,11 @@
         @csrf
             <label class="form-label">Upload Image</label>
             <input type="file" name="image[]"
-                class="form-control form-control-sm form-control-file shadow-none @error('image')is-invalid @enderror" multiple/>
+                class="form-control form-control-sm form-control-file shadow-none @error('image')is-invalid @enderror @error('image.*')is-invalid @enderror" multiple/>
             @error('image')
+                <span class="invalid-feedback fw-bolder">{{ $message }}</span>
+            @enderror
+            @error('image.*')
                 <span class="invalid-feedback fw-bolder">{{ $message }}</span>
             @enderror
         </div>

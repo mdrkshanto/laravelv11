@@ -32,7 +32,7 @@ class TestController extends Controller
         // return $request;
 
         $images = [];
-        foreach ($request->image as $file) {
+        foreach ($request->file('image') as $file) {
             $images[] = $this->imageUrl($file, $directory, 500, 500);
         }
 
