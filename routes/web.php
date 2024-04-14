@@ -7,5 +7,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/test', [TestController::class, 'index']);
+Route::get('/test', [TestController::class, 'index'])->name('test');
 Route::post('/test', [TestController::class, 'imageStore'])->name('postTest');

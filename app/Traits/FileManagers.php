@@ -6,7 +6,16 @@ use Intervention\Image\ImageManager as Image;
 
 trait FileManagers
 {
-    protected function imageUrl($image, $directory, $width = false, $height = false): string
+    /**
+     * Save image as webp format.
+     *
+     * @param mixed $image
+     * @param string $directory
+     * @param float $width
+     * @param float $height
+     * @return string $imageUrl
+     */
+    protected function imageUrl(mixed $image, string $directory, $width = false, $height = false): string
     {
         makeDirectory(storage_path($directory));
         $imageName = hexdec(uniqid()) . '.webp';
