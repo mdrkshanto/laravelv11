@@ -12,6 +12,6 @@
                 <span class="invalid-feedback fw-bolder">{{ $message }}</span>
             @enderror
         </div>
-        <button type="submit" class="btn btn-sm shadow-none btn-outline-success col-7">Upload</button>
+        <button type="submit" class="btn btn-sm shadow-none btn-success col-7">Upload</button>
     </form>
 </div>
