@@ -9,7 +9,7 @@ class TestRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'image' => 'required|image'
+            // 'date' => 'required|date|date_format:Y-n-j,Y-m-d,d-m-Y,j-n-Y,m-d-Y,n-j-Y,Y/n/j,Y/m/d,d/m/Y,j/n/Y,m/d/Y,n/j/Y'
         ];
     }
 }

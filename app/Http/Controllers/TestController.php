@@ -26,7 +26,21 @@ class TestController extends Controller
     public function imageStore(TestRequest $request)
     {
         $directory = 'web/images/test';
-        $file = $request->file('image');
-        return $this->imageUrl($file, $directory, 500, 500);
+        /* $file = $request->file('image');
+        return $this->imageUrl($file, $directory, 500, 500); */
+
+        // return $request;
+
+        $images = [];
+        foreach ($request->image as $file) {
+            $images[] = $this->imageUrl($file, $directory, 500, 500);
+        }
+
+        $image = [];
+        foreach ($images as $value) {
+            $image[] = $value;
+        }
+
+        dd($image);
     }
 }
